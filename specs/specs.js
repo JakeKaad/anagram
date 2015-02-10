@@ -5,7 +5,11 @@ describe('anagram', function() {
 
   it("returns matching anagrams from the array of the word", function() {
     expect(anagram("arc", ["car", "dog", "cat", "cap", "hot"])).to.equal("Matches: car")
-  });  
+  });
+
+  it("returns matching anagrams when there are more than one matches", function() {
+    expect(anagram("antlers", ["star", "sternal", "rentals", "chicken"])).to.equal("Matches: sternal, rentals")
+  });
 });
 
 describe('checkArrays', function() {
