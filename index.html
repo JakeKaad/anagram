@@ -5,23 +5,30 @@
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <script src="js/jquery-1.11.2.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Title Case</title>
+    <title>Anagram Checker</title>
   </head>
   <body>
     <div class="container">
-      <h1>Title case</h1>
+      <h1>Anagram Checker</h1>
 
-      <form id="title-case">
+      <form id="anagrams">
         <div class="form-group">
           <label for="word">Enter your word:</label>
           <input id="word" type="text">
+
+          <label for="wordList">Enter your list of words to check:</label>
+          <input id="wordList" type="wordList">
         </div>
 
-        <button type="submit" class="btn btn-danger">Titleize!</button>
+        <button type="submit" class="btn btn-danger submit">Anagrams?</button>
       </form>
 
-      <div id="result" class="well">
-        <p>Here is your answer: <span id="titleized"></span></p>
+      <a href="file:///Users/Guest/Desktop/anagram/index.html" class="starts_hidden">
+        <button class= "btn btn-success">Again?</button>
+      </a>
+
+      <div id="result" class="starts_hidden">
+        <p><span id="anagramMatches"></span></p>
       </div>
     </div>
   </body>

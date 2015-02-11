@@ -45,3 +45,23 @@ var checkArrays = function(arr1, arr2) {
   };
   return true;
 };
+
+
+$(document).ready(function() {
+  $("form#anagrams").submit(function(event) {
+  var wordToCheck = $("input#word").val();
+  var listOfWords = $("input#wordList").val();
+  listOfWords = listOfWords.split(" ");
+
+  results = anagram(wordToCheck, listOfWords);
+  $("span#anagramMatches").text(results);
+  $(".starts_hidden").toggle(function(){
+    $(this).fadeIn();
+  });
+  $(".submit").toggle(function(){
+    $(this).fadeout();
+  })
+
+  event.preventDefault();
+  });
+});
